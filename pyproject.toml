@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hydration-reminder-ai-mcp"
+version = "0.1.0"
+description = "Track water intake, calculate hydration goals based on body weight, and send reminder schedules."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+hydration_reminder_ai_mcp = "hydration_reminder_ai_mcp.server:main"
