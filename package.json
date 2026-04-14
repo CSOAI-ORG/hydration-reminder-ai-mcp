@@ -1,0 +1,14 @@
+{
+  "name": "hydration-reminder-ai-mcp",
+  "version": "1.0.0",
+  "description": "MEOK AI Labs MCP Server: hydration-reminder-ai-mcp",
+  "main": "server.py",
+  "scripts": {
+    "start": "python server.py"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/hydration-reminder-ai-mcp"
+  }
+}
