@@ -1,11 +1,53 @@
 {
   "name": "hydration-reminder-ai-mcp",
-  "description": "Track water intake, calculate hydration goals based on body weight, and send reminder schedules.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Hydration tracking and reminders by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
-      "name": "hydration_plan",
-      "description": "",
+      "name": "log_water_intake",
+      "description": "Log water/beverage intake. Specify ml directly or use container type (glass, bottle, cup, etc.).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "amount_ml": {
+            "type": "number"
+          },
+          "drink_type": {
+            "type": "string"
+          },
+          "container": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "user_id"
+        ]
+      }
+    },
+    {
+      "name": "get_daily_hydration",
+      "description": "Get today's hydration summary with progress toward target.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "target_ml": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "user_id"
+        ]
+      }
+    },
+    {
+      "name": "calculate_target",
+      "description": "Calculate personalized daily hydration target based on weight, activity, and climate.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -14,31 +56,27 @@
           },
           "activity_level": {
             "type": "string"
+          },
+          "climate": {
+            "type": "string"
           }
         },
         "required": [
-          "weight_kg",
-          "activity_level"
+          "weight_kg"
         ]
       }
     },
     {
-      "name": "reminder_schedule",
-      "description": "",
+      "name": "get_hydration_tips",
+      "description": "Get hydration tips and advice for specific situations.",
       "parameters": {
         "type": "object",
         "properties": {
-          "wake_time": {
-            "type": "string"
-          },
-          "sleep_time": {
+          "situation": {
             "type": "string"
           }
         },
-        "required": [
-          "wake_time",
-          "sleep_time"
-        ]
+        "required": []
       }
     }
   ]

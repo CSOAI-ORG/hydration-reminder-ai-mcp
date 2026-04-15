@@ -1,23 +1,48 @@
 name: hydration-reminder-ai-mcp
-description: Track water intake, calculate hydration goals based on body weight, and
-  send reminder schedules.
+description: Hydration tracking and reminders by MEOK AI Labs.
 version: 1.0.0
 tools:
-- name: hydration_plan
-  description: ''
+- name: log_water_intake
+  description: Log water/beverage intake. Specify ml directly or use container type
+    (glass, bottle, cup, etc.).
+  parameters:
+  - name: user_id
+    type: string
+    required: true
+  - name: amount_ml
+    type: number
+    required: false
+  - name: drink_type
+    type: string
+    required: false
+  - name: container
+    type: string
+    required: false
+- name: get_daily_hydration
+  description: Get today's hydration summary with progress toward target.
+  parameters:
+  - name: user_id
+    type: string
+    required: true
+  - name: target_ml
+    type: number
+    required: false
+- name: calculate_target
+  description: Calculate personalized daily hydration target based on weight, activity,
+    and climate.
   parameters:
   - name: weight_kg
     type: number
     required: true
   - name: activity_level
     type: string
-    required: true
-- name: reminder_schedule
-  description: ''
+    required: false
+  - name: climate
+    type: string
+    required: false
+- name: get_hydration_tips
+  description: Get hydration tips and advice for specific situations.
   parameters:
-  - name: wake_time
+  - name: situation
     type: string
-    required: true
-  - name: sleep_time
-    type: string
-    required: true
+    required: false
