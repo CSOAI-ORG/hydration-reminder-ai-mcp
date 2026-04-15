@@ -59,11 +59,11 @@ _BEVERAGE_FACTORS = {
 }
 
 
-mcp = FastMCP("hydration-reminder-ai-mcp", instructions="Hydration tracking and reminders by MEOK AI Labs.")
+mcp = FastMCP("hydration-reminder-ai", instructions="Hydration tracking and reminders by MEOK AI Labs.")
 
 
-@mcp.tool(name="log_water_intake")
-async def log_water_intake(user_id: str, amount_ml: float = None, drink_type: str = "water", container: str = "", api_key: str = "") -> dict:
+@mcp.tool()
+def log_water_intake(user_id: str, amount_ml: float = None, drink_type: str = "water", container: str = "", api_key: str = "") -> dict:
     """Log water/beverage intake. Specify ml directly or use container type (glass, bottle, cup, etc.)."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -114,8 +114,8 @@ async def log_water_intake(user_id: str, amount_ml: float = None, drink_type: st
     }
 
 
-@mcp.tool(name="get_daily_hydration")
-async def get_daily_hydration(user_id: str, target_ml: float = 2500, api_key: str = "") -> dict:
+@mcp.tool()
+def get_daily_hydration(user_id: str, target_ml: float = 2500, api_key: str = "") -> dict:
     """Get today's hydration summary with progress toward target."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -184,8 +184,8 @@ async def get_daily_hydration(user_id: str, target_ml: float = 2500, api_key: st
     }
 
 
-@mcp.tool(name="calculate_target")
-async def calculate_target(weight_kg: float, activity_level: str = "moderate", climate: str = "temperate", api_key: str = "") -> dict:
+@mcp.tool()
+def calculate_target(weight_kg: float, activity_level: str = "moderate", climate: str = "temperate", api_key: str = "") -> dict:
     """Calculate personalized daily hydration target based on weight, activity, and climate."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -249,8 +249,8 @@ async def calculate_target(weight_kg: float, activity_level: str = "moderate", c
     }
 
 
-@mcp.tool(name="get_hydration_tips")
-async def get_hydration_tips(situation: str = "general", api_key: str = "") -> dict:
+@mcp.tool()
+def get_hydration_tips(situation: str = "general", api_key: str = "") -> dict:
     """Get hydration tips and advice for specific situations."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
