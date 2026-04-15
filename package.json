@@ -1,7 +1,7 @@
 {
   "name": "hydration-reminder-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs MCP Server: hydration-reminder-ai-mcp",
+  "description": "Hydration Reminder Ai MCP server. Tools: log water intake, get daily hydration, calculate target. Built by MEOK AI Labs.",
   "main": "server.py",
   "scripts": {
     "start": "python server.py"

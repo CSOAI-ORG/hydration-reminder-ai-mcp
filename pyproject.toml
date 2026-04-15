@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 [project]
 name = "hydration-reminder-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — hydration-reminder-ai-mcp"
+description = "Hydration Reminder Ai MCP server. Tools: log water intake, get daily hydration, calculate target. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]

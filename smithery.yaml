@@ -1,5 +1,6 @@
 name: hydration-reminder-ai-mcp
-description: Hydration tracking and reminders by MEOK AI Labs.
+description: 'Hydration Reminder Ai MCP server. Tools: log water intake, get daily
+  hydration, calculate target. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: log_water_intake
