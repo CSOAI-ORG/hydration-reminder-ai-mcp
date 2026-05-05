@@ -1,59 +1,38 @@
-# Hydration Reminder AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Hydration tracking and reminders
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/hydration-reminder-ai-mcp)](https://github.com/CSOAI-ORG/hydration-reminder-ai-mcp/stargazers)
+
+# uhydrationU reminderU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/hydration-reminder-ai-mcp)](https://www.npmjs.com/package/@meok-ai/hydration-reminder-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/hydration-reminder-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install hydration-reminder-ai-mcp
+# or
+npm install -g @meok-ai/hydration-reminder-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install hydration-reminder-ai-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `log_water_intake`
-Log water/beverage intake. Specify ml directly or use container type (glass, bottle, cup, etc.).
-
-**Parameters:**
-- `user_id` (str): User identifier
-- `amount_ml` (float): Amount in millilitres (optional, defaults to container size or 250ml)
-- `drink_type` (str): Type of beverage — affects effective hydration calculation (default: "water")
-- `container` (str): Container type: glass, cup, bottle, small_bottle, large_bottle, mug, shot, sip, gulp
-
-### `get_daily_hydration`
-Get today's hydration summary with progress toward target.
-
-**Parameters:**
-- `user_id` (str): User identifier
-- `target_ml` (float): Daily hydration target in ml (default: 2500)
-
-### `calculate_target`
-Calculate personalized daily hydration target based on weight, activity, and climate.
-
-**Parameters:**
-- `weight_kg` (float): Body weight in kilograms
-- `activity_level` (str): One of: sedentary, light, moderate, active, very_active, athlete (default: "moderate")
-- `climate` (str): One of: cold, temperate, warm, hot, humid, tropical (default: "temperate")
-
-### `get_hydration_tips`
-Get hydration tips and advice for specific situations.
-
-**Parameters:**
-- `situation` (str): One of: general, exercise, hot_weather, office, morning (default: "general")
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
