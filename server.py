@@ -80,6 +80,14 @@ def log_water_intake(user_id: str, amount_ml: float = None, drink_type: str = "w
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        user_id (str): The user id to analyze or process.
+        amount_ml (float): The amount ml to analyze or process.
+        drink_type (str): The drink type to analyze or process.
+        container (str): The container to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -162,6 +170,12 @@ def get_daily_hydration(user_id: str, target_ml: float = 2500, api_key: str = ""
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        user_id (str): The user id to analyze or process.
+        target_ml (float): The target ml to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -262,6 +276,13 @@ def calculate_target(weight_kg: float, activity_level: str = "moderate", climate
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        weight_kg (float): The weight kg to analyze or process.
+        activity_level (str): The activity level to analyze or process.
+        climate (str): The climate to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -357,6 +378,11 @@ def get_hydration_tips(situation: str = "general", api_key: str = "") -> dict:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        situation (str): The situation to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
