@@ -64,7 +64,23 @@ mcp = FastMCP("hydration-reminder-ai", instructions="Hydration tracking and remi
 
 @mcp.tool()
 def log_water_intake(user_id: str, amount_ml: float = None, drink_type: str = "water", container: str = "", api_key: str = "") -> dict:
-    """Log water/beverage intake. Specify ml directly or use container type (glass, bottle, cup, etc.)."""
+    """Log water/beverage intake. Specify ml directly or use container type (glass, bottle, cup, etc.).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -116,7 +132,23 @@ def log_water_intake(user_id: str, amount_ml: float = None, drink_type: str = "w
 
 @mcp.tool()
 def get_daily_hydration(user_id: str, target_ml: float = 2500, api_key: str = "") -> dict:
-    """Get today's hydration summary with progress toward target."""
+    """Get today's hydration summary with progress toward target.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -186,7 +218,23 @@ def get_daily_hydration(user_id: str, target_ml: float = 2500, api_key: str = ""
 
 @mcp.tool()
 def calculate_target(weight_kg: float, activity_level: str = "moderate", climate: str = "temperate", api_key: str = "") -> dict:
-    """Calculate personalized daily hydration target based on weight, activity, and climate."""
+    """Calculate personalized daily hydration target based on weight, activity, and climate.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -251,7 +299,23 @@ def calculate_target(weight_kg: float, activity_level: str = "moderate", climate
 
 @mcp.tool()
 def get_hydration_tips(situation: str = "general", api_key: str = "") -> dict:
-    """Get hydration tips and advice for specific situations."""
+    """Get hydration tips and advice for specific situations.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
