@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Hydration tracking, reminders, and daily water intake analysis — MEOK AI Labs."""
+"""
+Hydration tracking, reminders, and daily water intake analysis — MEOK AI Labs."""
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json
@@ -105,7 +105,7 @@ def log_water_intake(user_id: str, amount_ml: float = None, drink_type: str = "w
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -193,7 +193,7 @@ def get_daily_hydration(user_id: str, target_ml: float = 2500, api_key: str = ""
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -300,7 +300,7 @@ def calculate_target(weight_kg: float, activity_level: str = "moderate", climate
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -400,7 +400,7 @@ def get_hydration_tips(situation: str = "general", api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -449,5 +449,8 @@ def get_hydration_tips(situation: str = "general", api_key: str = "") -> dict:
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

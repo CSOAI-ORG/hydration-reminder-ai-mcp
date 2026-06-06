@@ -1,0 +1,9 @@
+# hydration-reminder-ai-mcp - Auto-trigger Rules
+
+When the user asks about hydration reminder, use hydration-reminder-ai-mcp tools: log_water_intake, get_daily_hydration, calculate_target, get_hydration_tips
+
+**MCP server for hydration reminder ai mcp operations**
+
+Install: `pip install hydration-reminder-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

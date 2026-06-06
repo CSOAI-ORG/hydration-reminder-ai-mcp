@@ -1,0 +1,33 @@
+# hydration-reminder-ai-mcp
+# **MCP server for hydration reminder ai mcp operations**
+
+## Install
+```bash
+pip install hydration-reminder-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `log_water_intake`
+Log water/beverage intake. Specify ml directly or use container type (glass, bottle, cup, etc.).
+
+### `get_daily_hydration`
+Get today's hydration summary with progress toward target.
+
+### `calculate_target`
+Calculate personalized daily hydration target based on weight, activity, and climate.
+
+### `get_hydration_tips`
+Get hydration tips and advice for specific situations.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

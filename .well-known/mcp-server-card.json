@@ -1,0 +1,25 @@
+{
+  "name": "hydration-reminder-ai-mcp",
+  "title": "Hydration Reminder Ai Mcp",
+  "description": "Hydration Reminder Ai MCP server. Tools: log water intake, get daily hydration, calculate target. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "log_water_intake"
+    },
+    {
+      "name": "get_daily_hydration"
+    },
+    {
+      "name": "calculate_target"
+    },
+    {
+      "name": "get_hydration_tips"
+    }
+  ]
+}
