@@ -1,0 +1,59 @@
+{
+  "name": "hydration-reminder-ai-mcp",
+  "description": "Hydration Reminder Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/hydration-reminder-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "log_water_intake",
+      "name": "Log Water Intake",
+      "description": "log_water_intake via hydration-reminder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_daily_hydration",
+      "name": "Get Daily Hydration",
+      "description": "get_daily_hydration via hydration-reminder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_target",
+      "name": "Calculate Target",
+      "description": "calculate_target via hydration-reminder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_hydration_tips",
+      "name": "Get Hydration Tips",
+      "description": "get_hydration_tips via hydration-reminder-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

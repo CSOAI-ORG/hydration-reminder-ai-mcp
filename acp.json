@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "hydration-reminder-ai-mcp",
+    "description": "Hydration Reminder Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "hydration-reminder-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "log_water_intake",
+      "get_daily_hydration",
+      "calculate_target",
+      "get_hydration_tips"
+    ]
+  }
+}
