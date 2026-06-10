@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "hydration-reminder-ai-mcp"
-version = "1.0.6"
+version = "1.0.8"
 readme = "README.md"
 description = "Hydration Reminder Ai MCP server. Tools: log water intake, get daily hydration, calculate target. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
